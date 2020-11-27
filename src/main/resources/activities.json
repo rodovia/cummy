@@ -1,0 +1,24 @@
+{
+	"activities": [
+		{
+			"name": "Read Dead Redemption",
+			"type": 0
+		},
+		{
+			"name": "Sonic Mania",
+			"type": 0
+		},
+		{
+			"name": "Overwatch",
+			"type": 0
+		},
+		{
+			"name": "League of Legends",
+			"type": 0
+		},
+		{
+			"name": "Minecraft",
+			"type": 0
+		}
+	]
+}
