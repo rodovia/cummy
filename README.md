@@ -4,4 +4,8 @@ um bot genérico para o discord
 
 # Compilar
 
-**TODO** fazer o passo-a-passo
+```
+./gradlew shadowJar
+```
+
+O .jar vai estar em `/build/libs/`.
