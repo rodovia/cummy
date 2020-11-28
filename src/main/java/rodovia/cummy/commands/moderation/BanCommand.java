@@ -6,6 +6,7 @@ import java.util.List;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.MessageBuilder;
+import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.Member;
 import rodovia.cummy.api.Category;
 import rodovia.cummy.api.Command;
@@ -19,11 +20,13 @@ public class BanCommand extends Command {
 		this.name = "ban";
 		this.aliases = new String[] {"banir"};
 		this.category = Category.MODERATION;
+		this.requiredPermissions = new Permission[] {Permission.BAN_MEMBERS};
+		this.requiredUserPermissions = new Permission[] {Permission.BAN_MEMBERS, Permission.KICK_MEMBERS};
+		this.guildOnly = true;
 	}
 	
 	@Override
-	protected void execute(Context ctx, String[] args) {		
-		
+	protected void execute(Context ctx, String[] args) {
 		String id;
 		try {
 			id = new ArgumentParser().parseMentions(args[0]);

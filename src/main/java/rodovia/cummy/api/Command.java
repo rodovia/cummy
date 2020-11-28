@@ -5,6 +5,7 @@ import java.util.List;
 
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.Activity;
+import rodovia.cummy.errors.GuildOnlyCommandException;
 import rodovia.cummy.errors.MissingPermissionsException;
 import rodovia.cummy.errors.UserMissingPermissionsException;
 
@@ -61,6 +62,12 @@ public abstract class Command {
 	}
 	
 	public final void run(Context ctx, String[] args) {
+		if (ctx.getGuild() == null) {
+			if (this.guildOnly) {
+				throw new GuildOnlyCommandException();
+			}
+		}
+		
 		// Verificador das permissões que o bot tem.
 		List<Permission> forb = new ArrayList<>();
 		for (Permission p : this.requiredPermissions) {
