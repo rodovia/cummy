@@ -23,41 +23,41 @@ public abstract class Command {
 	
 	protected abstract void execute(Context ctx, String[] args);
 	
-	public String getName() {
+	public final String getName() {
 		return this.name;
 	}
 	
-	public String[] getAliases() {
+	public final String[] getAliases() {
 		return this.aliases;
 	}
 	
-	public Permission[] getRequiredPermissions() {
+	public final Permission[] getRequiredPermissions() {
 		return this.requiredPermissions;
 	}
 	
-	public boolean isGuildOnly() {
+	public final boolean isGuildOnly() {
 		return this.guildOnly;
 	}
 	
-	public String getHelp() {
+	public final String getHelp() {
 		return (this.help != null) ? this.help : "Nenhuma ajuda disponível";
 	}
 	
-	public String getBrief() {
+	public final String getBrief() {
 		if (this.brief == null)
 			return this.getHelp().split("\n")[0];
 		return this.brief;
 	}
 	
-	public String getExample() {
+	public final String getExample() {
 		return this.example;
 	}
 	
-	public String getArgumentation() {
+	public final String getArgumentation() {
 		return this.argumentation;
 	}
 	
-	public Category getCategory() {
+	public final Category getCategory() {
 		return this.category;
 	}
 	

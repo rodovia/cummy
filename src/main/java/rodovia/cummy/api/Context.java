@@ -104,6 +104,10 @@ public class Context {
 		return this.getChannel().sendMessage(message);
 	}
 	
+	public MessageAction reply(String content) {
+		return this.getChannel().sendMessage(this.getAuthor().getAsMention() + " " + content);
+	}
+	
 	public CommandManager getCommandManager() {
 		return this.cmdMan;
 	}

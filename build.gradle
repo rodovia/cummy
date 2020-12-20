@@ -25,5 +25,5 @@ dependencies {
 }
 
 application {
-    mainClass = 'rodovia.cummy.Cummy'
+    mainClassName = 'rodovia.cummy.Cummy'
 }

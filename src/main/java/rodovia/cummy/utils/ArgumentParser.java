@@ -9,7 +9,7 @@ public class ArgumentParser {
 
 	private static final Pattern MENTION = Pattern.compile("^<@!?(\\d{17,19})>");
 	
-	public String parseMentions(String str) {
+	public static String parseMentions(String str) {
 		Matcher match = MENTION.matcher(str);
 		
 		if (match.find()) {

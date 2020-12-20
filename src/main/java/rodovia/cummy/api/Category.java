@@ -1,7 +1,5 @@
 package rodovia.cummy.api;
 
-import java.util.List;
-
 public enum Category {
 	GENERAL,
 	MISC,
